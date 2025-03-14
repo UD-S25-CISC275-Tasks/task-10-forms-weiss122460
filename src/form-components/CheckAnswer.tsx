@@ -9,7 +9,7 @@ export function CheckAnswer({ expectedAnswer }: { expectedAnswer: string }): Rea
             <input
                 type="text"
                 value={userAnswer}
-                onChange={(e) => setUserAnswer(e.target.value)}
+                onChange={(e) => { setUserAnswer(e.target.value); }}  // Moved comment here
                 placeholder="Enter your answer"
             />
             <p>{userAnswer === expectedAnswer ? "✔️" : "❌"}</p>
